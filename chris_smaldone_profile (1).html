@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Christopher Smaldone — Senior Account Executive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #f4f4f7;
+    --surface: #ffffff;
+    --surface2: #f0f0f5;
+    --border: #e0e0ea;
+    --text: #1a1a2e;
+    --muted: #7070a0;
+    --accent1: #5b52e8;
+    --accent2: #00a887;
+    --accent3: #e84545;
+    --accent4: #d4930a;
+    --gradient1: linear-gradient(135deg, #5b52e8 0%, #9333ea 100%);
+    --gradient2: linear-gradient(135deg, #00a887 0%, #0891b2 100%);
+    --gradient3: linear-gradient(135deg, #e84545 0%, #ea580c 100%);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── LAYOUT ─── */
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 32px 120px;
+  }
+
+  /* ─── HEADER ─── */
+  .header {
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 56px;
+    position: relative;
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 80px;
+    height: 2px;
+    background: var(--gradient1);
+  }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: var(--accent2);
+  }
+
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(42px, 7vw, 68px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+  }
+
+  .tagline {
+    font-size: 16px;
+    color: var(--muted);
+    max-width: 580px;
+    line-height: 1.6;
+    border-left: 2px solid var(--accent1);
+    padding-left: 16px;
+    font-style: italic;
+  }
+
+  .header-meta {
+    display: flex;
+    gap: 24px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+  }
+
+  .meta-pill {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    background: var(--surface);
+  }
+
+  /* ─── SECTION HEADERS ─── */
+  .section {
+    margin-bottom: 64px;
+  }
+
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+  }
+
+  /* ─── EXECUTIVE SUMMARY ─── */
+  .summary-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #3a3a5c;
+    max-width: 760px;
+  }
+
+  .summary-text strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  /* ─── KEY WINS ─── */
+  .wins-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  @media (max-width: 600px) { .wins-grid { grid-template-columns: 1fr; } }
+
+  .win-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 22px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .win-card:hover {
+    border-color: var(--accent1);
+    transform: translateY(-2px);
+  }
+
+  .win-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+  }
+
+  .win-card.purple::before { background: var(--gradient1); }
+  .win-card.teal::before   { background: var(--gradient2); }
+  .win-card.red::before    { background: var(--gradient3); }
+  .win-card.yellow::before { background: linear-gradient(135deg, #ffd166, #f97316); }
+
+  .win-card.hero {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #1a1a2e 0%, #2d2060 100%);
+    border-color: #5b52e8;
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .win-card.hero::before { background: linear-gradient(180deg, #ffd166, #f59e0b); width: 4px; }
+  .win-card.hero:hover { border-color: #a78bfa; transform: translateY(-2px); }
+
+  .hero-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #f59e0b;
+    margin-bottom: 6px;
+  }
+
+  .hero-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 30px;
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 0;
+  }
+
+  .hero-divider {
+    width: 1px;
+    height: 56px;
+    background: rgba(255,255,255,0.12);
+    flex-shrink: 0;
+  }
+
+  .hero-desc {
+    font-size: 14px;
+    color: #b0b0d8;
+    line-height: 1.65;
+    max-width: 480px;
+  }
+
+  .hero-desc strong { color: #ffffff; }
+
+  .win-stat {
+    font-family: 'DM Serif Display', serif;
+    font-size: 26px;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .win-stat.purple { color: #5b52e8; }
+  .win-stat.teal   { color: var(--accent2); }
+  .win-stat.red    { color: var(--accent3); }
+  .win-stat.yellow { color: var(--accent4); }
+
+  .win-desc {
+    font-size: 13px;
+    color: #5a5a80;
+    line-height: 1.5;
+  }
+
+  /* ─── EXPERIENCE ─── */
+  .exp-block {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .exp-block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .exp-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  .exp-company {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+
+  .exp-role {
+    font-size: 13px;
+    color: var(--accent2);
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.05em;
+  }
+
+  .exp-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    white-space: nowrap;
+    padding-top: 4px;
+  }
+
+  .exp-tag-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+
+  .exp-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: var(--surface2);
+    color: var(--muted);
+    border: 1px solid var(--border);
+  }
+
+  .exp-body {
+    font-size: 14.5px;
+    color: #3a3a5c;
+    line-height: 1.75;
+  }
+
+  .exp-body p { margin-bottom: 10px; }
+  .exp-body p:last-child { margin-bottom: 0; }
+
+  .exp-highlights {
+    margin-top: 16px;
+    list-style: none;
+  }
+
+  .exp-highlights li {
+    font-size: 13.5px;
+    color: #4a4a70;
+    padding: 6px 0 6px 20px;
+    position: relative;
+    border-bottom: 1px solid var(--surface2);
+  }
+
+  .exp-highlights li:last-child { border-bottom: none; }
+
+  .exp-highlights li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--accent1);
+    font-size: 12px;
+  }
+
+  /* ─── PHILOSOPHY ─── */
+  .philosophy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: 600px) { .philosophy-grid { grid-template-columns: 1fr; } }
+
+  .phil-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px;
+  }
+
+  .phil-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 36px;
+    line-height: 1;
+    margin-bottom: 10px;
+    background: var(--gradient1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .phil-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .phil-body {
+    font-size: 13px;
+    color: #5a5a80;
+    line-height: 1.6;
+  }
+
+  .framework-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .framework-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    padding: 7px 14px;
+    border-radius: 6px;
+    background: var(--surface2);
+    border: 1px solid var(--accent1);
+    color: #a78bfa;
+  }
+
+  /* ─── CASE STUDIES ─── */
+  .case-study {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .case-study::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    opacity: 0.04;
+    pointer-events: none;
+  }
+
+  .case-study.cs1::after { background: var(--accent1); transform: translate(60px, -80px); }
+  .case-study.cs2::after { background: var(--accent2); transform: translate(60px, -80px); }
+  .case-study.cs3::after { background: var(--accent4); transform: translate(60px, -80px); }
+
+  .cs-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .cs-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+
+  .cs-badge.purple { background: rgba(108,99,255,0.15); color: #a78bfa; border: 1px solid rgba(108,99,255,0.3); }
+  .cs-badge.teal   { background: rgba(0,212,170,0.12); color: var(--accent2); border: 1px solid rgba(0,212,170,0.3); }
+  .cs-badge.yellow { background: rgba(255,209,102,0.12); color: var(--accent4); border: 1px solid rgba(255,209,102,0.3); }
+
+  .cs-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    color: var(--text);
+  }
+
+  .cs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 560px) { .cs-grid { grid-template-columns: 1fr; } }
+
+  .cs-field {
+    padding: 14px 16px;
+    background: var(--surface2);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+
+  .cs-field-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .cs-field-value {
+    font-size: 13.5px;
+    color: #3a3a5c;
+    line-height: 1.5;
+  }
+
+  .cs-outcome {
+    background: rgba(0,168,135,0.07);
+    border: 1px solid rgba(0,168,135,0.25);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 13.5px;
+    color: #00785f;
+    line-height: 1.55;
+  }
+
+  .cs-outcome-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(0,168,135,0.7);
+    margin-bottom: 6px;
+  }
+
+  /* ─── TESTIMONIALS ─── */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  @media (max-width: 600px) { .testimonials-grid { grid-template-columns: 1fr; } }
+
+  .testimonial {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px;
+    transition: border-color 0.2s;
+  }
+
+  .testimonial:hover { border-color: var(--accent1); }
+
+  .testimonial-quote {
+    font-size: 13.5px;
+    color: #3a3a5c;
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 16px;
+    border-left: 2px solid var(--accent1);
+    padding-left: 14px;
+  }
+
+  .testimonial-author {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .testimonial-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .testimonial-role {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    color: var(--accent2);
+  }
+
+  .testimonial-rel {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  .testimonial-full {
+    grid-column: 1 / -1;
+  }
+
+  /* ─── TOOLS ─── */
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+  }
+
+  .tool-category {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+
+  .tool-cat-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+
+  .tool-list {
+    list-style: none;
+  }
+
+  .tool-list li {
+    font-size: 13px;
+    color: #3a3a5c;
+    padding: 3px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .tool-list li::before {
+    content: '';
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--accent1);
+    flex-shrink: 0;
+  }
+
+  /* ─── ABOUT ─── */
+  .about-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  @media (max-width: 560px) { .about-card { grid-template-columns: 1fr; } }
+
+  .about-item-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .about-item-value {
+    font-size: 14px;
+    color: #3a3a5c;
+    line-height: 1.6;
+  }
+
+  /* ─── FOOTER QUOTE ─── */
+  .footer-quote {
+    margin-top: 72px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+
+  .footer-quote blockquote {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(18px, 3vw, 24px);
+    font-style: italic;
+    color: #9090b8;
+    max-width: 600px;
+    margin: 0 auto 16px;
+    line-height: 1.5;
+  }
+
+  .footer-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+  }
+
+  /* ─── SCROLLBAR ─── */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: #d0d0e0; border-radius: 3px; }
+
+  /* ─── SELECTION ─── */
+  ::selection { background: rgba(108,99,255,0.3); color: #fff; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ═══════ HEADER ═══════ -->
+  <header class="header">
+    <div class="eyebrow">Senior Account Executive · SaaS · GTM Strategy</div>
+    <h1>Christopher<br>Smaldone</h1>
+    <p class="tagline">I help companies unlock revenue by turning complex sales processes into predictable, high-impact outcomes — through sharp discovery, multi-threaded deal strategy, and relentless focus on customer ROI.</p>
+    <div class="header-meta">
+      <span class="meta-pill">Tampa, FL</span>
+      <span class="meta-pill">Sales Enablement · HCM · Workforce Tech</span>
+      <span class="meta-pill">Enterprise + Commercial</span>
+    </div>
+  </header>
+
+  <!-- ═══════ EXECUTIVE SUMMARY ═══════ -->
+  <section class="section">
+    <div class="section-label">01 · Executive Summary</div>
+    <p class="summary-text">
+      I'm a Senior Account Executive with a proven track record of winning complex, multi-stakeholder deals across enterprise and commercial SaaS.
+      At <strong>Highspot</strong>, I exceeded expansion quota every quarter in my first year and <strong>closed Q4 at 169% to plan</strong> — including net-new business secured in the final hours of the quarter. My edge is the ability to think like a strategist while executing like a closer: I build business cases that resonate at the C-suite level, map power across complex organizations, and convert stalled deals into signed agreements. I don't just sell software — <strong>I sell outcomes.</strong> With a background spanning workforce management, HCM, and revenue enablement, I bring cross-industry pattern recognition to every conversation I walk into.
+    </p>
+  </section>
+
+  <!-- ═══════ KEY WINS ═══════ -->
+  <section class="section">
+    <div class="section-label">02 · Key Wins & Impact</div>
+    <div class="wins-grid">
+      <div class="win-card hero">
+        <div>
+          <div class="hero-label">Highspot · 2025</div>
+          <div class="hero-title">President's Winner</div>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="hero-desc">
+          Recognized among Highspot's top-performing Account Executives. <strong>Closed the year at 100% to target</strong>, finished Q4 at <strong>169% to plan</strong>, and generated the most net-new pipeline from scratch on the team — all in year one.
+        </div>
+      </div>
+      <div class="win-card purple">
+        <div class="win-stat purple">169%</div>
+        <div class="win-desc">To plan in final quarter at Highspot — including net-new business closed in the final hours of the quarter</div>
+      </div>
+      <div class="win-card teal">
+        <div class="win-stat teal">100%</div>
+        <div class="win-desc">Full-year target attainment in first year at Highspot, exceeding expansion quota every single quarter off ramp</div>
+      </div>
+      <div class="win-card yellow">
+        <div class="win-stat yellow">#1</div>
+        <div class="win-desc">Generated the most pipeline from scratch on the team — operating with the output of a high-performing outbound seller</div>
+      </div>
+      <div class="win-card red">
+        <div class="win-stat red">Multi-threaded</div>
+        <div class="win-desc">Built and launched Salesloft cadence infrastructure for digital room outreach — creating repeatable, scalable systems across the book</div>
+      </div>
+      <div class="win-card purple">
+        <div class="win-stat purple">Strategic AE</div>
+        <div class="win-desc">Promoted into Senior AE role based on deal complexity, performance, and contributions to team GTM strategy</div>
+      </div>
+      <div class="win-card teal">
+        <div class="win-stat teal">Greenfield</div>
+        <div class="win-desc">Built pipeline from zero across South Florida at Paycom — closing competitive HCM deals against ADP, Paychex, and UKG</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ EXPERIENCE ═══════ -->
+  <section class="section">
+    <div class="section-label">03 · Experience</div>
+
+    <div class="exp-block">
+      <div class="exp-header">
+        <div>
+          <div class="exp-company">Highspot</div>
+          <div class="exp-role">Senior Account Executive — Renewals & Expansion</div>
+        </div>
+        <div class="exp-date">2025 – Present · Tampa, FL</div>
+      </div>
+      <div class="exp-tag-row">
+        <span class="exp-tag">Sales Enablement</span>
+        <span class="exp-tag">Commercial / Enterprise</span>
+        <span class="exp-tag">Expansion &amp; Retention</span>
+        <span class="exp-tag">Multi-threading</span>
+      </div>
+      <div class="exp-body">
+        <p>Full ownership of a strategic commercial and enterprise book of business. Responsible for renewal health, platform adoption, expansion revenue, and net revenue growth across Highspot's Sales Enablement platform.</p>
+        <p>I run a structured account management motion — proactive QBRs, executive sponsorship mapping, adoption-led expansion, and multi-stakeholder alignment. Every account has a health score in my head: I know who's at risk, who's ready to expand, and who needs an exec touch. I built Salesloft cadences specifically designed to share digital rooms and drive meaningful engagement at scale. I also contribute internally to GTM strategy — helping shape competitive positioning against Seismic and Gong.</p>
+      </div>
+      <ul class="exp-highlights">
+        <li>Exceeded expansion quota every quarter in Year 1 — finished at 100% to annual target</li>
+        <li>Closed Q4 at 169% to plan, including net-new business in the final hours of the quarter</li>
+        <li>Generated the most pipeline from scratch on the team — cited by manager as operating with outbound AE discipline</li>
+        <li>Led E3 feature adoption across strategic accounts as part of FY27 initiative</li>
+        <li>Built scalable digital outreach infrastructure (Salesloft + digital rooms + microsite co-initiative)</li>
+      </ul>
+    </div>
+
+    <div class="exp-block">
+      <div class="exp-header">
+        <div>
+          <div class="exp-company">Paycom Software</div>
+          <div class="exp-role">Account Executive — Net New Logo</div>
+        </div>
+        <div class="exp-date">2024 – 2025 · South Florida</div>
+      </div>
+      <div class="exp-tag-row">
+        <span class="exp-tag">HCM / Payroll</span>
+        <span class="exp-tag">Greenfield Territory</span>
+        <span class="exp-tag">Competitive Displacement</span>
+        <span class="exp-tag">Full-cycle AE</span>
+      </div>
+      <div class="exp-body">
+        <p>Full-cycle AE owning net new logo acquisition across a greenfield South Florida territory. Displaced entrenched HCM incumbents — ADP, Paychex, UKG — by building ROI-anchored business cases and navigating multi-stakeholder buying committees across industries: professional services, real estate, financial services, nonprofits, and law firms.</p>
+        <p>Ran structured outbound with disciplined first-call discovery. Named accounts included Fort Partners, ChildNet, Greenspoon Marder LLP, and Sound Income Group.</p>
+      </div>
+      <ul class="exp-highlights">
+        <li>Built pipeline from zero in competitive greenfield territory</li>
+        <li>Closed deals against legacy HCM vendors using structured ROI and compliance risk framing</li>
+        <li>Developed C-suite and HR Director relationships across South Florida market</li>
+      </ul>
+    </div>
+
+    <div class="exp-block">
+      <div class="exp-header">
+        <div>
+          <div class="exp-company">Insight Global</div>
+          <div class="exp-role">Account Manager — Workforce Solutions</div>
+        </div>
+        <div class="exp-date">2022 – 2024</div>
+      </div>
+      <div class="exp-tag-row">
+        <span class="exp-tag">Staffing</span>
+        <span class="exp-tag">SAP Fieldglass</span>
+        <span class="exp-tag">VMS / Procurement</span>
+      </div>
+      <div class="exp-body">
+        <p>Owned a book of staffing and workforce solutions accounts. Managed contractor placements through SAP Fieldglass, navigating complex vendor management environments across procurement, HR, and operations stakeholders. Built multi-level client relationships and drove account retention through strong delivery outcomes.</p>
+      </div>
+    </div>
+
+    <div class="exp-block">
+      <div class="exp-header">
+        <div>
+          <div class="exp-company">DDI System</div>
+          <div class="exp-role">Account Manager — ERP / Distribution Software</div>
+        </div>
+        <div class="exp-date">2019 – 2021</div>
+      </div>
+      <div class="exp-tag-row">
+        <span class="exp-tag">ERP</span>
+        <span class="exp-tag">Distribution / Supply Chain</span>
+        <span class="exp-tag">Consultative Sales</span>
+      </div>
+      <div class="exp-body">
+        <p>Consultative selling into distribution and supply chain buyers. Focused on understanding operational pain and mapping software ROI to business outcomes. Mentored by Adam Waller (Founder, exited 2022), who cited a rare ability to connect and bridge gaps through emotional intelligence and situational awareness.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ SALES PHILOSOPHY ═══════ -->
+  <section class="section">
+    <div class="section-label">04 · How I Sell</div>
+    <div class="philosophy-grid">
+      <div class="phil-card">
+        <div class="phil-num">01</div>
+        <div class="phil-title">Discovery-First, Always</div>
+        <div class="phil-body">I don't pitch until I've diagnosed. Every deal starts with deep discovery — understanding the business impact of pain, who owns it, and what success looks like to each stakeholder. MEDDICC isn't a checklist; it's how I think.</div>
+      </div>
+      <div class="phil-card">
+        <div class="phil-num">02</div>
+        <div class="phil-title">Multi-Threading is Non-Negotiable</div>
+        <div class="phil-body">Single-threaded deals die. I map every account across Champion, Economic Buyer, and Technical Stakeholder — using digital rooms, Salesloft sequences, and exec alignment to build depth before I need it.</div>
+      </div>
+      <div class="phil-card">
+        <div class="phil-num">03</div>
+        <div class="phil-title">Business Case Over Feature Selling</div>
+        <div class="phil-body">By the time I'm closing, the buyer has already built the ROI case in their head — because I helped them build it. I develop custom cases tied to the metrics each stakeholder cares about: pipeline velocity, rep productivity, CFO visibility.</div>
+      </div>
+      <div class="phil-card">
+        <div class="phil-num">04</div>
+        <div class="phil-title">Long-Game Account Management</div>
+        <div class="phil-body">Winning the deal is the beginning, not the end. I drive adoption, measure outcomes, and turn customers into internal champions. Expansion is the natural result of value delivered — not a separate motion.</div>
+      </div>
+    </div>
+    <div class="framework-row">
+      <span class="framework-tag">MEDDICC</span>
+      <span class="framework-tag">SPIN Selling</span>
+      <span class="framework-tag">Challenger Sale</span>
+      <span class="framework-tag">Value-Based ROI Modeling</span>
+      <span class="framework-tag">QBR-Led Account Planning</span>
+      <span class="framework-tag">Competitive Displacement</span>
+    </div>
+  </section>
+
+  <!-- ═══════ DEAL CASE STUDIES ═══════ -->
+  <section class="section">
+    <div class="section-label">05 · Deal Case Studies</div>
+
+    <div class="case-study cs1">
+      <div class="cs-header">
+        <span class="cs-badge purple">Turnaround Play</span>
+        <div class="cs-title">At-Risk Enterprise Renewal — Highspot</div>
+      </div>
+      <div class="cs-grid">
+        <div class="cs-field">
+          <div class="cs-field-label">Problem</div>
+          <div class="cs-field-value">Strategic account showing low platform adoption, declining usage metrics, and disengaged champion. Churn risk elevated.</div>
+        </div>
+        <div class="cs-field">
+          <div class="cs-field-label">Stakeholders</div>
+          <div class="cs-field-value">VP of Sales (disengaged champion), Sales Enablement Manager (frustrated end user), CFO (renewal approver, skeptical of ROI)</div>
+        </div>
+        <div class="cs-field">
+          <div class="cs-field-label">What I Did</div>
+          <div class="cs-field-value">Rebuilt champion relationship through structured discovery. Ran an adoption audit and built a 90-day success plan tied to VP-level business outcomes. Brought in exec sponsor for co-presented QBR. Created custom ROI summary tied to their sales cycle metrics.</div>
+        </div>
+        <div class="cs-field">
+          <div class="cs-field-label">Approach</div>
+          <div class="cs-field-value">Multi-threaded re-engagement · Executive alignment · Outcome-anchored QBR · Adoption-led framing</div>
+        </div>
+      </div>
+      <div class="cs-outcome">
+        <div class="cs-outcome-label">Outcome</div>
+        Account renewed. Expansion conversation opened. Account moved from red to green health status within one quarter.
+      </div>
+    </div>
+
+    <div class="case-study cs2">
+      <div class="cs-header">
+        <span class="cs-badge teal">Competitive Displacement</span>
+        <div class="cs-title">Legacy HCM Displacement — Paycom</div>
+      </div>
+      <div class="cs-grid">
+        <div class="cs-field">
+          <div class="cs-field-label">Problem</div>
+          <div class="cs-field-value">200-person South Florida professional services firm on legacy HCM — payroll errors, manual HR processes, zero workforce analytics. Estimated $40K+/year in manual correction costs.</div>
+        </div>
+        <div class="cs-field">
+          <div class="cs-field-label">Stakeholders</div>
+          <div class="cs-field-value">COO (economic buyer, operations-focused), HR Director (champion), Payroll Manager (technical gatekeeper, risk-averse)</div>
+        </div>
+        <div class="cs-field">
+          <div class="cs-field-label">What I Did</div>
+          <div class="cs-field-value">Three-call discovery. Built business case anchored to compliance risk and operational efficiency — not features. Navigated Payroll Manager objections by including her in a hands-on technical demo. Used "why change now / why us / why not nothing" framework to close competitive eval.</div>
+        </div>
+        <div class="cs-field">
+          <div class="cs-field-label">Approach</div>
+          <div class="cs-field-value">Structured discovery · ROI business case · Stakeholder-specific objection handling · Competitive framing</div>
+        </div>
+      </div>
+      <div class="cs-outcome">
+        <div class="cs-outcome-label">Outcome</div>
+        Full HCM platform closed. Payroll, HR, and time & attendance — full suite implementation.
+      </div>
+    </div>
+
+    <div class="case-study cs3">
+      <div class="cs-header">
+        <span class="cs-badge yellow">Expansion Play</span>
+        <div class="cs-title">Champion-Led Org-Wide Expansion — Highspot</div>
+      </div>
+      <div class="cs-grid">
+        <div class="cs-field">
+          <div class="cs-field-label">Problem</div>
+          <div class="cs-field-value">Mid-market account using Highspot at team level only. Champion (Sales Enablement Manager) had no budget authority. VP of Sales not yet engaged.</div>
+        </div>
+        <div class="cs-field">
+          <div class="cs-field-label">Stakeholders</div>
+          <div class="cs-field-value">Sales Enablement Manager (champion, no budget), VP of Sales (economic buyer, cold), RevOps (technical influencer)</div>
+        </div>
+        <div class="cs-field">
+          <div class="cs-field-label">What I Did</div>
+          <div class="cs-field-value">Co-built internal business case with champion — gave her the ROI data, competitive benchmarks, and exec talking points. Secured VP meeting by framing around revenue productivity, not platform features. Delivered customized digital room proposal with real industry metrics. Closed RevOps on integration pre-emptively to eliminate late-stage technical objections.</div>
+        </div>
+        <div class="cs-field">
+          <div class="cs-field-label">Approach</div>
+          <div class="cs-field-value">Champion enablement · Exec access strategy · Digital room proposal · RevOps pre-close</div>
+        </div>
+      </div>
+      <div class="cs-outcome">
+        <div class="cs-outcome-label">Outcome</div>
+        Org-wide seat expansion closed. Significant revenue uplift. Champion subsequently promoted to Head of Enablement.
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ TESTIMONIALS ═══════ -->
+  <section class="section">
+    <div class="section-label">06 · What Leaders Say</div>
+    <div class="testimonials-grid">
+
+      <div class="testimonial testimonial-full">
+        <div class="testimonial-quote">
+          "Chris made an immediate impact coming straight off ramp, exceeding his expansion quota every quarter in his first year and generating the most pipeline from scratch on the team. His ability to consistently create opportunity while closing meaningful expansion speaks to both his lead-gen discipline and his customer-first approach. He is incredibly coachable, brings a true 'can-do' attitude to every challenge, and pairs a tireless work ethic with a genuine commitment to mastering his craft."
+        </div>
+        <div class="testimonial-author">
+          <div class="testimonial-name">Patrick Smith</div>
+          <div class="testimonial-role">Director, Renewals & Account Management · Highspot</div>
+          <div class="testimonial-rel">Direct Manager · February 2026</div>
+        </div>
+      </div>
+
+      <div class="testimonial testimonial-full">
+        <div class="testimonial-quote">
+          "He finished the year at 100% to target and closed his final quarter at 169% to plan, including securing net-new business in the final hours of the quarter. Chris brings integrity, professionalism, and genuine care for his customers and teammates. He shows up every day with energy, accountability, and a desire to win the right way. His combination of execution, mindset, and relationship-building skills makes him exceptionally well-positioned to succeed as a strategic seller in any organization."
+        </div>
+        <div class="testimonial-author">
+          <div class="testimonial-name">Jeremy Pauquette</div>
+          <div class="testimonial-role">Revenue-Driven SaaS Sales Leader · 6x President's Club</div>
+          <div class="testimonial-rel">Direct Manager · January 2026</div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="testimonial-quote">
+          "Chris brings a rare mix of strong sales ability, confidence, and courage. He approaches his work strategically, taking the time to deeply understand his clients' needs and ensuring the solutions he provides create real, lasting value. Chris doesn't just sell — he builds trust and long-term partnerships."
+        </div>
+        <div class="testimonial-author">
+          <div class="testimonial-name">Tim Work</div>
+          <div class="testimonial-role">Senior Director · Actabl</div>
+          <div class="testimonial-rel">Direct Manager (Highspot) · January 2026</div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="testimonial-quote">
+          "What sets Chris apart is his profound ability to connect. He has a unique talent for understanding the nuances of a situation, making those he works with feel completely supported. By truly hearing his colleagues and partners — professionally and emotionally — he bridges gaps and finds solutions that others miss."
+        </div>
+        <div class="testimonial-author">
+          <div class="testimonial-name">Adam Waller</div>
+          <div class="testimonial-role">Founder · DDI System (exited 2022)</div>
+          <div class="testimonial-rel">Mentor · March 2026</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════ TOOLS ═══════ -->
+  <section class="section">
+    <div class="section-label">07 · Tools & Tech Stack</div>
+    <div class="tools-grid">
+      <div class="tool-category">
+        <div class="tool-cat-label">Sales Enablement</div>
+        <ul class="tool-list">
+          <li>Highspot</li>
+        </ul>
+      </div>
+      <div class="tool-category">
+        <div class="tool-cat-label">CRM</div>
+        <ul class="tool-list">
+          <li>Salesforce</li>
+          <li>Clari</li>
+        </ul>
+      </div>
+      <div class="tool-category">
+        <div class="tool-cat-label">Sales Engagement</div>
+        <ul class="tool-list">
+          <li>Salesloft</li>
+          <li>Outreach</li>
+        </ul>
+      </div>
+      <div class="tool-category">
+        <div class="tool-cat-label">Conversation Intelligence</div>
+        <ul class="tool-list">
+          <li>Gong</li>
+          <li>Chorus</li>
+        </ul>
+      </div>
+      <div class="tool-category">
+        <div class="tool-cat-label">Prospecting</div>
+        <ul class="tool-list">
+          <li>LinkedIn Sales Navigator</li>
+          <li>ZoomInfo</li>
+        </ul>
+      </div>
+      <div class="tool-category">
+        <div class="tool-cat-label">AI Tools</div>
+        <ul class="tool-list">
+          <li>Claude (Anthropic)</li>
+          <li>ChatGPT</li>
+          <li>Gemini</li>
+        </ul>
+      </div>
+      <div class="tool-category">
+        <div class="tool-cat-label">Deal Strategy</div>
+        <ul class="tool-list">
+          <li>MEDDICC Framework</li>
+          <li>Business Case Templates</li>
+          <li>Digital Rooms</li>
+        </ul>
+      </div>
+      <div class="tool-category">
+        <div class="tool-cat-label">Productivity</div>
+        <ul class="tool-list">
+          <li>Notion</li>
+          <li>Google Workspace</li>
+          <li>Slack / Zoom</li>
+        </ul>
+      </div>
+      <div class="tool-category">
+        <div class="tool-cat-label">Workforce / VMS</div>
+        <ul class="tool-list">
+          <li>SAP Fieldglass</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ ABOUT ═══════ -->
+  <section class="section">
+    <div class="section-label">08 · About Me</div>
+    <div class="about-card">
+      <div>
+        <div class="about-item-label">Location</div>
+        <div class="about-item-value">Tampa, FL</div>
+      </div>
+      <div>
+        <div class="about-item-label">Education</div>
+        <div class="about-item-value">M.Ed. — Master's in Education<br>B.S. — Fairfield University</div>
+      </div>
+      <div>
+        <div class="about-item-label">Outside of Work</div>
+        <div class="about-item-value">Pickleball, tennis, fitness. Exploring a laundromat acquisition with my brother — first step into entrepreneurship.</div>
+      </div>
+      <div>
+        <div class="about-item-label">What Drives Me</div>
+        <div class="about-item-value">I'm competitive by nature and build for the long game — in fitness, in sales, and in business. My background in education means I know how to meet people where they are, which makes me a better seller and a better teammate.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ FOOTER ═══════ -->
+  <div class="footer-quote">
+    <blockquote>"I don't just sell software. I sell what's possible when the right tools meet the right strategy."</blockquote>
+    <div class="footer-date">Last Updated · March 2026</div>
+  </div>
+
+</div>
+</body>
+</html>
